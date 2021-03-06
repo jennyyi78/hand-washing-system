@@ -1,6 +1,6 @@
 [INTRO]
 
-A:Hi, we're Blubber Bread Annihilation Drill and today we chose to solve the ICU Hand Sanitizing Problem. We're here to talk to you about our project: Clean Hands We Demands
+G:Hi, we're Blubber Bread Annihilation Drill and today we chose to solve the ICU Hand Sanitizing Problem. We're here to talk to you about our project: Clean Hands We Demands
 
 G: With hospital acquired infections accounting for over 100,000 deaths every year,  ensuring that people go into ICUs with clean hands could save lives. Our solution is simple and
 eLeGanT, taking advantage of something we are starting to see everywhere thanks to the pandemic: hand sanitizing dispensers.
@@ -18,7 +18,7 @@ We didn't want it to be some stuffy "Please wash your hands" because people woul
 they become harder to forget [show different messages].
 
 
-I: Now, given the constraints of our situation, we had to scale things down. Instead of a big screen on a door, we have a lil baby LCD. And the buttons are force sensors
+J: Now, given the constraints of our situation, we had to scale things down. Instead of a big screen on a door, we have a lil baby LCD. And the buttons are force sensors
 attatched to the Arduino. 
 
 [Explaining Code Time, maybe scroll through the well commented code]
@@ -29,7 +29,7 @@ times people use the hand sanitizer and then open the door [maybe put compliance
 [Maaaybbeeee have Jenny talk about the code if that's possible and she can]
 
 [Ending]
-G: We here at Blubber Bread Annihiliation Drill hope that our little solution can cause big changes in healthcare. The tools to keep our hands sanitized already exist: all
+I: We here at Blubber Bread Annihiliation Drill hope that our little solution can cause big changes in healthcare. The tools to keep our hands sanitized already exist: all
 that needs to happen is a system that gets people to actually use them. By giving those who forget to hand sanitize disparaging messages, we've create a system that encourages
 cleanliness without compromising privacy or requiring changes to existing infrastructure!
 
