@@ -25,11 +25,12 @@ attatched to the Arduino.
 Our code does two key things: it ensures that the hand sanitizer is used before the door is opened (lest the user be prompted with some choice words), and it tracks how many
 times people use the hand sanitizer and then open the door [maybe put compliance on the screen] and how many times people ignore the messages and just open the door
 [non-compliance].
-
+[Maaaybbeeee have Jenny talk about the code if that's possible and she can]
 
 [Ending]
-
-
+We here at Blubber Bread Annihiliation Drill hope that our little solution can cause big changes in healthcare. The tools to keep our hands sanitized already exist: all
+that needs to happen is a system that gets people to actually use them. By giving those who forget to hand sanitize disparaging messages, we create a system that encourages
+cleanliness.
 
 
 
