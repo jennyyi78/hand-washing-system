@@ -86,9 +86,27 @@ void printMessage(String mode) {
   if (mode == "Good") {
     int randIndex = random(0, goodMessagesLength);
     lcd.print(goodMessages[randIndex]);
+    String message = goodMessages[randIndex];
+    for(int i = 0; i < message.length(); i++) {
+      if (message[i] == '-') {
+        lcd.setCursor(0, 2);
+      } else {
+        lcd.print(message[i]); 
+      }
+      
+    }
+    
   } else {
     int randIndex = random(0, badMessagesLength);
     lcd.print(badMessages[randIndex]);
+    String message = badMessages[randIndex];
+    for(int i = 0; i < message.length(); i++) {
+      if (message[i] == '-') {
+        lcd.setCursor(0, 2);
+      } else {
+        lcd.print(message[i]); 
+      }
+    }
   }
   
   
