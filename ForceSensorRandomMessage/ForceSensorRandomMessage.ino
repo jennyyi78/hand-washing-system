@@ -13,11 +13,11 @@ int timer = 500;
 bool soapPressed = false;
 int timePressed = 0;
 
-String goodMessages[] = {"Good", "Test"}; 
-int goodMessagesLength = 2;
+String goodMessages[] = {"Good job", "You deserve the best", "My little pogchamp", "Cleanliness is a virtue" }; 
+int goodMessagesLength = 4;
 
-String badMessages[] = {"Bad", "Message"}; 
-int badMessagesLength = 2;
+String badMessages[] = {"Why are you like this?", "You are disgusting", "Literal scum", "Despicable swine", "Not very poggers of you" }; 
+int badMessagesLength = 5;
 
 int compliance = 0;
 int noncompliance = 0;
