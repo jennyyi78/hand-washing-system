@@ -1,5 +1,6 @@
 
 #include <LiquidCrystal.h>
+
 #define fsrpin A0
 #define fsrpin2 A1
 
@@ -16,7 +17,7 @@ unsigned long timePressed = 0;
 String goodMessages[] = {"Good job", "You deserve the-best", "My little-pogchamp", "Cleanliness is a-virtue" }; 
 int goodMessagesLength = 4;
 
-String badMessages[] = {"Why are you like-this?", "You are-disgusting", "Literal scum", "Despicable swine", "Not very poggers-of you" };  
+std::string badMessages[] = {"Why are you like-this?", "You are-disgusting", "Literal scum", "Despicable swine", "Not very poggers-of you" };  
 int badMessagesLength = 5;
 
 int compliance = 0;
@@ -85,7 +86,6 @@ void outSP(String msg, bool soapPressed)
 void printMessage(String mode) {
   if (mode == "Good") {
     int randIndex = random(0, goodMessagesLength);
-    lcd.print(goodMessages[randIndex]);
     String message = goodMessages[randIndex];
     for(int i = 0; i < message.length(); i++) {
       if (message[i] == '-') {
@@ -98,7 +98,6 @@ void printMessage(String mode) {
     
   } else {
     int randIndex = random(0, badMessagesLength);
-    lcd.print(badMessages[randIndex]);
     String message = badMessages[randIndex];
     for(int i = 0; i < message.length(); i++) {
       if (message[i] == '-') {
