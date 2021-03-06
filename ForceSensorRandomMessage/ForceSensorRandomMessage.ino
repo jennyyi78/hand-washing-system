@@ -13,11 +13,14 @@ int timer = 500;
 bool soapPressed = false;
 int timePressed = 0;
 
-String goodMessages[] = {"Message", "Test"}; 
+String goodMessages[] = {"Good", "Test"}; 
 int goodMessagesLength = 2;
 
-String badMessages[] = {"Message", "Test"}; 
+String badMessages[] = {"Bad", "Message"}; 
 int badMessagesLength = 2;
+
+int compliance = 0;
+int noncompliance = 0;
 
 
 void setup() {
@@ -45,20 +48,22 @@ void loop() {
     printMessage("Good");
     delay(timer);
     lcd.clear();
+    compliance++;
   } else if (doorFsrreading > 500 && !soapPressed) {
     printMessage("Bad");
     delay(timer);
     lcd.clear();
+    noncompliance++;
   }
 }
 
 void printMessage(String mode) {
   if (mode == "Good") {
-  int randIndex = random(0, goodMessagesLength);
-  lcd.print(goodMessages[randIndex]);
+    int randIndex = random(0, goodMessagesLength);
+    lcd.print(goodMessages[randIndex]);
   } else {
-  int randIndex = random(0, badMessagesLength);
-  lcd.print(badMessages[randIndex]);
+    int randIndex = random(0, badMessagesLength);
+    lcd.print(badMessages[randIndex]);
   }
   
   
