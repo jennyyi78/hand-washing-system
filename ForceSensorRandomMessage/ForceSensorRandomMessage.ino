@@ -13,11 +13,13 @@ int doorFsrreading;
 int timer = 2000;
 bool soapPressed = false;
 unsigned long timePressed = 0;
+const unsigned long ONE_MINUTE = 60000;
+unsigned long pastTimeMeasure = 0;
 
-String goodMessages[] = {"Good job", "You deserve the-best", "My little-pogchamp", "Cleanliness is a-virtue" }; 
+String goodMessages[] = {"Good job", "You deserve the-best", "My little-pogchamp", "Cleanliness is a-virtue", "Those hands-looking fresh!" }; 
 int goodMessagesLength = 4;
 
-std::string badMessages[] = {"Why are you like-this?", "You are-disgusting", "Literal scum", "Despicable swine", "Not very poggers-of you" };  
+String badMessages[] = {"Why are you like-this?", "You are-disgusting", "Literal scum", "Despicable swine", "Not very poggers-of you", "Your spirit-animal is a poop" };  
 int badMessagesLength = 5;
 
 int compliance = 0;
@@ -34,53 +36,41 @@ void loop() {
   soapFsrreading = analogRead(fsrpin);
   doorFsrreading = analogRead(fsrpin2);
   
-  lcd.home();
-
+  lcd.home();  
   
-  outlong("start loop - time since press:", millis() - timePressed );
-  // 1
-  if (soapPressed && (millis() - timePressed > 30000)) {
-    soapPressed = false; 
-    outSP("1 SP:", soapPressed);
-  }
-
-  // 2
+ 
+  if (soapPressed && (millis() - timePressed > 30000)) soapPressed = false;     
+  
   if (soapFsrreading > 500) {
     soapPressed = true;
-    timePressed = millis();
-    outSP("2 SP:", soapPressed);
+    timePressed = millis();    
   }
-
-  //3
   if (doorFsrreading > 500 && soapPressed) {
-    printMessage("Good");
-    soapPressed = false;
-    delay(timer);
-    lcd.clear();
-    compliance++;
-     outSP("3 SP:", soapPressed);
-  } 
-  else if (doorFsrreading > 500 && !soapPressed) {
-    //4
-    printMessage("Bad");
-    delay(timer);
-    lcd.clear();
-    noncompliance++;
-    outSP("4 SP:", soapPressed);
-   
+      printMessage("Good");
+      soapPressed = false;
+      delay(timer);
+      lcd.clear();
+      compliance++;
+  } else if (doorFsrreading > 500 && !soapPressed) {
+      printMessage("Bad");
+      delay(timer);
+      lcd.clear();
+      noncompliance++;      
   }
-  outSP("end loop - SP: ", soapPressed);
-}
-void outlong(String msg, unsigned long timeVar)
-{
-  Serial.print(msg);
-  Serial.println(timeVar);
+  
+  if(millis() >= ONE_MINUTE + pastTimeMeasure){
+    outCompliances();
+    pastTimeMeasure = millis();
+  }
 }
 
-void outSP(String msg, bool soapPressed)
+void outCompliances()
 {
-  Serial.print(msg);
-  Serial.println(soapPressed);
+  Serial.print("Compliance: ");
+  Serial.print(compliance);
+  Serial.print(" ");
+  Serial.print("Noncompliance: ");
+  Serial.println(noncompliance);
 }
 
 void printMessage(String mode) {
