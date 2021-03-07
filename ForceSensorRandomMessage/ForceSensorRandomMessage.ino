@@ -36,8 +36,7 @@ void loop() {
   soapFsrreading = analogRead(fsrpin);
   doorFsrreading = analogRead(fsrpin2);
   
-  lcd.home();  
-  
+  lcd.home();    
  
   if (soapPressed && (millis() - timePressed > 30000)) soapPressed = false;     
   
