@@ -1,24 +1,24 @@
 [INTRO]
+[a video of our logo, panning slowly]
+G:Hi, we're Blubber Bread Annihilation Drill and today we chose to solve the ICU Hand Sanitizing Problem. We're here to talk to you about our project: Clean Hands We Demands
 
-A:Hi, we're Blubber Bread Annihilation Drill and today we chose to solve the ICU Hand Sanitizing Recognition System. We're here to talk to you about our project: []
+[video of a bed lol]
+G: With hospital acquired infections accounting for over 100,000 deaths every year,  ensuring that people go into ICUs with clean hands could save lives. Our solution is simple and
+eLeGanT, taking advantage of something we are starting to see everywhere thanks to the pandemic: hand sanitizing dispensers [show internet picture of it]
 
-G: With hospital acquired infections accounting for over 100,000 deaths,  ensuring that people go into ICUs with clean hands could save lives. Our solution is simple and
-eLeGanT, taking advantage of something we are starting to see everywhere thanks to the pandemic: hand sanitizing dispensers.
-
-[Maybe have some B-roll]
-
-A: Hand santizer dispensers aren't uncommon, usually featured outside of most doors, but they're often overlooked, blending into the background. Our solution aims to solve that. 
-Put a sensor on the dispenser, and a sensor on the door. Ideally, someone would use the dispenser, clean their hands, and then touch the door... and all would be well. 
-But if some naughty little rascal decides to open the door without sanitizing, BAM. We kill them on the spot.
+[video of a door or something?]
+A: Hand santizer dispensers aren't uncommon, featured outside of most doors. They are, however, often overlooked, blending into the background. Our solution aims to solve that. 
+You put a sensor on the dispenser, and a sensor on the door. Ideally, someone would use the dispenser, clean their hands, and then touch the door... and all would be well. 
+But if someone decides to open the door without sanitizing, BAM. We kill them on the spot.
 
 [start showing the technology]
 
-J: Okay, so that might be a little extreme, but we needed some reminder, so instead of murder, our idea instead opts for flashing a disparaging message on a screen on the door.
+J: Okay, so that might be a little extreme, so instead of murder, our idea instead opts for flashing a message on a screen attatched to the door.
 We didn't want it to be some stuffy "Please wash your hands" because people would start ignoring that very quickly. Instead, by giving the messages some more flavor,
 they become harder to forget [show different messages].
 
 
-I: Now, given the constraints of our situation, we had to scale this situation down. Instead of a big screen on a door, we have a lil baby LCD. And the buttons are force sensors
+J: Now, given the constraints of our situation, we had to scale things down. Instead of a big screen on a door, we have a lil baby LCD. And the buttons are force sensors
 attatched to the Arduino. 
 
 [Explaining Code Time, maybe scroll through the well commented code]
@@ -29,7 +29,7 @@ times people use the hand sanitizer and then open the door [maybe put compliance
 [Maaaybbeeee have Jenny talk about the code if that's possible and she can]
 
 [Ending]
-G: We here at Blubber Bread Annihiliation Drill hope that our little solution can cause big changes in healthcare. The tools to keep our hands sanitized already exist: all
+I: We here at Blubber Bread Annihiliation Drill hope that our little solution can cause big changes in healthcare. The tools to keep our hands sanitized already exist: all
 that needs to happen is a system that gets people to actually use them. By giving those who forget to hand sanitize disparaging messages, we've create a system that encourages
 cleanliness without compromising privacy or requiring changes to existing infrastructure!
 
