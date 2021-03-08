@@ -10,17 +10,19 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 int soapFsrreading;
 int doorFsrreading;
 
-int timer = 2000;
+const int timer = 2000;
+
 bool soapPressed = false;
 unsigned long timePressed = 0;
+
 const unsigned long ONE_MINUTE = 60000;
 unsigned long pastTimeMeasure = 0;
 
 String goodMessages[] = {"Good job", "You deserve the-best", "My little-pogchamp", "Cleanliness is a-virtue", "Those hands-looking fresh!" }; 
-int goodMessagesLength = 4;
+int goodMessagesLength = 5;
 
 String badMessages[] = {"Why are you like-this?", "You are-disgusting", "Literal scum", "Despicable swine", "Not very poggers-of you", "Your spirit-animal is a poop" };  
-int badMessagesLength = 5;
+int badMessagesLength = 6;
 
 int compliance = 0;
 int noncompliance = 0;
@@ -44,6 +46,7 @@ void loop() {
     soapPressed = true;
     timePressed = millis();    
   }
+  
   if (doorFsrreading > 500 && soapPressed) {
       printMessage("Good");
       soapPressed = false;
@@ -73,10 +76,18 @@ void outCompliances()
 }
 
 void printMessage(String mode) {
+  int randIndex;
+  String message;
+  
   if (mode == "Good") {
-    int randIndex = random(0, goodMessagesLength);
-    String message = goodMessages[randIndex];
-    for(int i = 0; i < message.length(); i++) {
+    randIndex = random(0, goodMessagesLength);
+    message = goodMessages[randIndex];
+  } else {
+    randIndex = random(0, badMessagesLength);
+    message = badMessages[randIndex];
+  }
+  
+  for(int i = 0; i < message.length(); i++) {
       if (message[i] == '-') {
         lcd.setCursor(0, 2);
       } else {
@@ -84,18 +95,6 @@ void printMessage(String mode) {
       }
       
     }
-    
-  } else {
-    int randIndex = random(0, badMessagesLength);
-    String message = badMessages[randIndex];
-    for(int i = 0; i < message.length(); i++) {
-      if (message[i] == '-') {
-        lcd.setCursor(0, 2);
-      } else {
-        lcd.print(message[i]); 
-      }
-    }
-  }
   
   
 }
