@@ -1,3 +1,3 @@
 # hand-washing-system
-Clean Hands We Demands - ICU Hand Washing Recognition System 2nd Place Winner  
+### Clean Hands We Demands - ICU Hand Washing Recognition System 2nd Place Winner  
 A prototype for an automated visual alert system for health-care workers to adhere to hand hygiene protocols as they enter a patient's room. Compliance data is recorded as well. Sensors detect whether the worker uses the hand sanitizer dispenser before opening the door to a patient's room. If so, the LCD screen flashes a positive message. If not, the LCD flashes a negative message. By giving the messages more flavor, they become harder to forget. A fun way to encourage people to sanitize consistently. 
